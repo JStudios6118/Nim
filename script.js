@@ -8,7 +8,28 @@ var takesLeft = 3;
 
 var game = false;
 
+function saveData(){
+  sessionStorage.clear();
+  
+  sessionStorage.setItem('p1name', document.getElementById("p1name").value);
+  sessionStorage.setItem('p2name', document.getElementById("p2name").value);
+  sessionStorage.setItem("gamemode", document.getElementById("gamemodeBTN").checked);
 
+  document.getElementById("p1name").disabled = true;
+  document.getElementById("p2name").disabled = true;
+  document.getElementById("gamemodeBTN").disabled = true;
+
+}
+
+function loadData(){
+  document.getElementById("p1name").value = sessionStorage.getItem('p1name');
+  document.getElementById("p2name").value = sessionStorage.getItem('p2name');
+
+  var isBool = (sessionStorage.getItem('gamemode') === 'true');
+  document.getElementById("gamemodeBTN").checked = isBool;
+}
+
+window.onload = loadData();
 
 function stats(){
   document.getElementById("data").innerHTML = "<h3 id='info'>Turn: " + String(players[turn]) + " - You can take " + String(takesLeft) + " more tokens</h3>";
@@ -27,7 +48,14 @@ function clicked(token){
     console.log("Index: " + String(index));
       
     if (index === 0){
-      document.getElementById("winText").innerHTML = "<h2>" + players[turn] + " won!</h2>";
+      if (sessionStorage.getItem('gamemode')  === "true"){
+        if(turn === 0){
+          turn++;
+        }else{
+          turn--;
+        }
+      }
+        document.getElementById("winText").innerHTML = "<h2>" + players[turn] + " won!</h2>";
   
       classes = document.getElementsByClassName('token');
       for (var i = 0; i < classes.length; i++) {
@@ -71,6 +99,7 @@ function start() {
   console.log(game)
   if (game === true){
     document.getElementById('startGame').value = "Reset";
+    saveData();
   } else {
     window.location.reload(true);
   }
