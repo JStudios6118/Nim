@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Nim</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h1 id="title">Game of Nim</h1>
+
+  <div id="game">
+    <div id="data">Start to Play</div>
+    <div id="winText"></div>
+    
+    <div id="tokens">
+      <h3 class="token" id="token1" onclick="clickManager(1)" onmouseover="onHover(1)" onmouseout="onMouseOut(1)">1</h3>
+      <h3 class="token" id="token2" onclick="clickManager(2)" onmouseover="onHover(2)" onmouseout="onMouseOut(2)">2</h3>
+      <h3 class="token" id="token3" onclick="clickManager(3)" onmouseover="onHover(3)" onmouseout="onMouseOut(3)">3</h3>
+      <h3 class="token" id="token4" onclick="clickManager(4)" onmouseover="onHover(4)" onmouseout="onMouseOut(4)">4</h3>
+      <h3 class="token" id="token5" onclick="clickManager(5)" onmouseover="onHover(5)" onmouseout="onMouseOut(5)">5</h3>
+      <h3 class="token" id="token6" onclick="clickManager(6)" onmouseover="onHover(6)" onmouseout="onMouseOut(6)">6</h3>
+      <h3 class="token" id="token7" onclick="clickManager(7)" onmouseover="onHover(7)" onmouseout="onMouseOut(7)">7</h3>
+      <h3 class="token" id="token8" onclick="clickManager(8)" onmouseover="onHover(8)" onmouseout="onMouseOut(8)">8</h3>
+      <h3 class="token" id="token9" onclick="clickManager(9)" onmouseover="onHover(9)" onmouseout="onMouseOut(9)">9</h3>
+      <h3 class="token" id="token10" onclick="clickManager(10)" onmouseover="onHover(10)" onmouseout="onMouseOut(10)">10</h3>
+      <h3 class="token" id="token11" onclick="clickManager(11)" onmouseover="onHover(11)" onmouseout="onMouseOut(11)">11</h3>
+      <h3 class="token" id="token12" onclick="clickManager(12)" onmouseover="onHover(12)" onmouseout="onMouseOut(12)">12</h3>
+    </div>
+  
+    <button id="passTurn" onclick="passTurn()">Pass Turn</button>
+  
+    <div id="settings">
+      <input type="button" id="startGame" onclick="start()" value="Start" width="10%">
+    
+      <input type="text" id="p1name" class="nameInput" placeholder="Player 1 Name" value="Player 1">
+      <input type="text" id="p2name" class="nameInput" placeholder="Player 2 Name" value="Player 2">
+
+      <input name="modeBox" type="checkbox" id="gamemodeBTN" data-title="If Checked, claiming token 1 results in you losing ">
+    </div>
+
+    <a href="https://sites.google.com/pleasantonusd.net/jcgames/home" target="blank">jcarlsontcsp</a>
+    <script src="script.js"></script>
+  </div>
+    
+</body>
+
+</html>

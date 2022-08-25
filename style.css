@@ -1,0 +1,125 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: lightsteelblue;
+}
+
+#tokens {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-right: 2rem
+}
+
+.token {
+  padding: 2rem;
+  background-color: gold;
+  margin: 0.375rem;
+  text-align: center;
+  width: 25px;
+  border-radius: 60px;
+  font-size: 22px;
+  user-select: none;
+  line-height: 27px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.token:hover {
+  background-color: goldenrod;
+}
+
+#passTurn {
+  background-color: #fecb3e;
+  width: 80%;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+
+  border: 5px solid #b2a72e;
+
+  transition: 0.3s;
+}
+
+#passTurn:hover {
+  background-color: #e5b738;
+  border: 3px solid #c8c22d;
+}
+
+#winText {
+  text-align: center;
+}
+
+#data {
+  font-family: Arial;
+}
+
+#settings {
+  margin-top: 10px;
+}
+.nameInput {
+  background-color: #fecb3e;
+  border-radius: 30px;
+  border: 3px solid #b2a72e;
+  width: 10%;
+  height: 30px;
+  padding-left: 10px;
+
+  transition: 0.3s;
+}
+
+.nameInput:hover {
+  background-color: #e3b331;
+  border: 3px solid #cec236;
+}
+
+#startGame {
+  margin-left: 10px;
+  width: 4%;
+  height: 36px;
+  background-color: #fecb3e;
+  border: 3px solid #b2a72e;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+#startGame:hover {
+  background-color: #e3b331;
+  border: 3px solid #cec236;
+}
+
+#title {
+  font-family: fantasy;
+  font-size: 40px;
+  background-color: lightblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#game {
+  background-color: #d3eef0;
+  padding: 0.5%;
+  border-radius: 25px;
+}
+
+#gamemodeBTN {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  padding-top: 50px
+}
+
+#gamemodeBTN[data-title]:hover::after{
+  content: attr(data-title);
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: gold;
+  padding: 5px;
+  width: 290px;
+  border-radius: 25px;
+}
